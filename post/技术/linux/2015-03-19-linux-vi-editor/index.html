@@ -1,0 +1,1419 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="generator" content="Hugo 0.121.2">
+
+    
+
+    
+
+    
+        
+            <meta name="description" content="总结了一些常用的vi命令" />
+        
+
+        
+            <meta
+                name="keywords"
+                content="hugo,site,new" />
+        
+
+        
+            <meta
+                name="author"
+                content="Jing Wang" />
+        
+
+    
+
+
+    <title>
+        
+            linux之vi编辑器命令使用 |
+            My New Hugo Site
+        
+    </title>
+
+    
+
+
+    
+    
+
+    
+    
+
+
+    
+    
+
+
+    
+    
+
+
+    
+    
+
+    
+
+
+    
+    
+
+    
+
+    
+
+        
+        
+
+
+        
+        
+
+
+        <link
+            rel="stylesheet"
+            href="/css/index_d751713.min.912d03bce61461ecbc3ca083479e1ed814bba94df76d0bdc6aa88fdca33621b9bb410dc2c81af31e8101fec62decfa5f6e48901ad673bc5056d2f1d1f2368a34.css"
+            integrity="sha512-kS0DvOYUYey8PKCDR54e2BS7qU33bQvcaqiP3KM2Ibm7QQ3CyBrzHoEB/sYt7PpfbkiQGtZzvFBW0vHR8jaKNA==" />
+    
+
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+</head>
+
+
+
+    <body>
+        <header class="header">
+    <div class="header_left">
+        
+    </div>
+
+    <div class="header_middle">
+        
+            linux之vi编辑器命令使用 -
+            My New Hugo Site
+        
+    </div>
+</header>
+
+
+
+        <main>
+            <aside class="sidebar">
+    
+
+
+
+    
+    
+
+    
+    
+
+
+    <ul class="section-tree">
+        
+            
+                <li
+                    
+                        class="dir opened-dir"
+                    >
+                    <span class="dir-text"> Posts </span>
+
+                    
+
+
+
+    
+    
+
+    
+    
+
+
+    <ul class="section-tree">
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/llm/2024-06-18-learn-lang-chain/" title="./post/%E6%8A%80%E6%9C%AF/llm/2024-06-18-learn-lang-chain/">
+                        
+                            手把手教你认识学会LangChain
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/llm/2024-06-18-text-to-vec/" title="./post/%E6%8A%80%E6%9C%AF/llm/2024-06-18-text-to-vec/">
+                        
+                            文本向量化
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/linux/2018-05-25-cron-session-log/" title="./post/%E6%8A%80%E6%9C%AF/linux/2018-05-25-cron-session-log/">
+                        
+                            session opened/closed for user root by (uid=0)
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/php/2017-07-17-anonymous-function/" title="./post/%E6%8A%80%E6%9C%AF/php/2017-07-17-anonymous-function/">
+                        
+                            PHP代码之使用匿名函数
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/php/2017-07-17-use-/" title="./post/%E6%8A%80%E6%9C%AF/php/2017-07-17-use-/">
+                        
+                            PHP代码之使用引用
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/php/2017-07-17-interface/" title="./post/%E6%8A%80%E6%9C%AF/php/2017-07-17-interface/">
+                        
+                            PHP类的接口`interface`
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/php/2017-06-23-composer-exceeded-time/" title="./post/%E6%8A%80%E6%9C%AF/php/2017-06-23-composer-exceeded-time/">
+                        
+                            Composer错误：exceeded the timeout of 300 seconds
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/php/2017-06-13-switch-between-multiple-php-version-on-ubuntu/" title="./post/%E6%8A%80%E6%9C%AF/php/2017-06-13-switch-between-multiple-php-version-on-ubuntu/">
+                        
+                            Ubuntu上在多个PHP版本之间切换
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/php/2017-04-01-php-recursion-memory-problem/" title="./post/%E6%8A%80%E6%9C%AF/php/2017-04-01-php-recursion-memory-problem/">
+                        
+                            递归时内存占用问题
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/mysql/2016-11-22-ubuntu-mysql-connect/" title="./post/%E6%8A%80%E6%9C%AF/mysql/2016-11-22-ubuntu-mysql-connect/">
+                        
+                            解决Ubuntu远程连接mysql连不上的问题
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/2016-11-01-shell-dos-fault/" title="./post/%E6%8A%80%E6%9C%AF/2016-11-01-shell-dos-fault/">
+                        
+                            Linux下执行shell提示错误syntax error:unexpected end of file
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/2016-09-29-mbp-router-wifi/" title="./post/%E6%8A%80%E6%9C%AF/2016-09-29-mbp-router-wifi/">
+                        
+                            Macbook pro连接无线路由不稳定掉线的解决办法
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/2015-05-11-ajax-cross-domain-with-cookies/" title="./post/%E6%8A%80%E6%9C%AF/2015-05-11-ajax-cross-domain-with-cookies/">
+                        
+                            Ajax跨域请求带上cookies
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/git/2016-04-14-git-bash-change-initial-directory/" title="./post/%E6%8A%80%E6%9C%AF/git/2016-04-14-git-bash-change-initial-directory/">
+                        
+                            Git Bash 更改初始目录
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/2016-04-14-skype-port-80/" title="./post/%E6%8A%80%E6%9C%AF/2016-04-14-skype-port-80/">
+                        
+                            Skype打开默认占用80端口问题
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E8%8D%89%E7%A8%BF/2016-03-30-some-questions-met/" title="./post/%E8%8D%89%E7%A8%BF/2016-03-30-some-questions-met/">
+                        
+                            面试中遇到的一些问题总结
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E8%8D%89%E7%A8%BF/2016-03-29-svn-git-diff/" title="./post/%E8%8D%89%E7%A8%BF/2016-03-29-svn-git-diff/">
+                        
+                            svn与git的一些区别
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/2016-03-16-memcache/" title="./post/%E6%8A%80%E6%9C%AF/2016-03-16-memcache/">
+                        
+                            Memcache整理
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/php/2016-03-04-php-encrypt-method/" title="./post/%E6%8A%80%E6%9C%AF/php/2016-03-04-php-encrypt-method/">
+                        
+                            几种常见的PHP加密算法
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E8%8D%89%E7%A8%BF/2016-03-02-dangerously-set-innerhtml/" title="./post/%E8%8D%89%E7%A8%BF/2016-03-02-dangerously-set-innerhtml/">
+                        
+                            React学习 之 Dangerously Set innerHTML
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/javascript/2016-03-01-useragent-is-weixin-browser/" title="./post/%E6%8A%80%E6%9C%AF/javascript/2016-03-01-useragent-is-weixin-browser/">
+                        
+                            微信内置浏览器UserAgent的判断
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E8%8D%89%E7%A8%BF/2016-02-29-mac-composer-install-problem/" title="./post/%E8%8D%89%E7%A8%BF/2016-02-29-mac-composer-install-problem/">
+                        
+                            Mac下安装composer遇到的问题
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/linux/2015-12-29-shell-check-server/" title="./post/%E6%8A%80%E6%9C%AF/linux/2015-12-29-shell-check-server/">
+                        
+                            自动检测程序正常运行，遇故障则重启服务
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/php/2015-12-25-redis&#43;mysql&#43;php-high-concurrence/" title="./post/%E6%8A%80%E6%9C%AF/php/2015-12-25-redis&#43;mysql&#43;php-high-concurrence/">
+                        
+                            【高并发简单解决方案】redis队列缓存 &#43; mysql 批量入库 &#43; php离线整合
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/php/2015-12-25-php-timing-task/" title="./post/%E6%8A%80%E6%9C%AF/php/2015-12-25-php-timing-task/">
+                        
+                            PHP设置定时任务的实现方法
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/php/2015-12-25-ip-to-address/" title="./post/%E6%8A%80%E6%9C%AF/php/2015-12-25-ip-to-address/">
+                        
+                            根据ip查询所在地
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/2015-12-23-preg-start/" title="./post/%E6%8A%80%E6%9C%AF/2015-12-23-preg-start/">
+                        
+                            正则表达式基础语法
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/2015-12-21-awesome-machine-learning/" title="./post/%E6%8A%80%E6%9C%AF/2015-12-21-awesome-machine-learning/">
+                        
+                            Awesome Machine Learning
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E7%94%9F%E6%B4%BB/2015-12-18-100-years-of-beauty/" title="./post/%E7%94%9F%E6%B4%BB/2015-12-18-100-years-of-beauty/">
+                        
+                            100 Years of Beauty
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/javascript/2015-12-18-javascript-array-function/" title="./post/%E6%8A%80%E6%9C%AF/javascript/2015-12-18-javascript-array-function/">
+                        
+                            Javascript各种数组方法
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/mysql/2015-12-17-mysql-update-varies-value/" title="./post/%E6%8A%80%E6%9C%AF/mysql/2015-12-17-mysql-update-varies-value/">
+                        
+                            mysql批量更新多条记录的不同值
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/php/2015-12-17-php-files-directory/" title="./post/%E6%8A%80%E6%9C%AF/php/2015-12-17-php-files-directory/">
+                        
+                            php获取文件夹下所有文件，包含子文件夹
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/php/2015-12-16-php-run-time/" title="./post/%E6%8A%80%E6%9C%AF/php/2015-12-16-php-run-time/">
+                        
+                            PHP调试执行时间
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/2015-12-06-win10-pid4-system/" title="./post/%E6%8A%80%E6%9C%AF/2015-12-06-win10-pid4-system/">
+                        
+                            win10下80端口被PID为4的System占用问题
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/php/2015-12-15-shortcut-save-url/" title="./post/%E6%8A%80%E6%9C%AF/php/2015-12-15-shortcut-save-url/">
+                        
+                            收藏到桌面的快捷方式
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/htmlcss/2015-12-10-ui-elements/" title="./post/%E6%8A%80%E6%9C%AF/htmlcss/2015-12-10-ui-elements/">
+                        
+                            各种常见的UI元素
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/jquery/2014-12-08-jquery-plugin/" title="./post/%E6%8A%80%E6%9C%AF/jquery/2014-12-08-jquery-plugin/">
+                        
+                            jQuery插件开发笔记
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/2015-12-06-shell-method-terminal/" title="./post/%E6%8A%80%E6%9C%AF/2015-12-06-shell-method-terminal/">
+                        
+                            执行系统命令的函数
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/2015-12-03-jekyll-template-grammer/" title="./post/%E6%8A%80%E6%9C%AF/2015-12-03-jekyll-template-grammer/">
+                        
+                            Jekyll模板变量&amp;语法
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/php/2015-12-03-php-zip-so/" title="./post/%E6%8A%80%E6%9C%AF/php/2015-12-03-php-zip-so/">
+                        
+                            测试phpexcel后报错Class &#39;ZipArchive&#39; not found解决方法
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/jquery/2015-12-02-jquery-plugin-template/" title="./post/%E6%8A%80%E6%9C%AF/jquery/2015-12-02-jquery-plugin-template/">
+                        
+                            jQuery插件模板
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/php/2015-12-02-memcache/" title="./post/%E6%8A%80%E6%9C%AF/php/2015-12-02-memcache/">
+                        
+                            Memcache基本教程
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/2014-12-01-one-line-browser-notepad/" title="./post/%E6%8A%80%E6%9C%AF/2014-12-01-one-line-browser-notepad/">
+                        
+                            一行代码，浏览器变临时编辑器
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/php/2015-12-01-php-zend_search_lucene-cn-search/" title="./post/%E6%8A%80%E6%9C%AF/php/2015-12-01-php-zend_search_lucene-cn-search/">
+                        
+                            使用PHP&#43;Zend_Search_Lucene做全站中文搜索引擎
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/mysql/2015-11-26-mysql-rand-n-row/" title="./post/%E6%8A%80%E6%9C%AF/mysql/2015-11-26-mysql-rand-n-row/">
+                        
+                            从Mysql某一表中随机读取n条数据的SQL查询语句
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/2015-11-19-data-hiding-in-image/" title="./post/%E6%8A%80%E6%9C%AF/2015-11-19-data-hiding-in-image/">
+                        
+                            用图片隐藏信息的技术实现
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E5%85%B6%E4%BB%96/2015-11-02-all-country-list/" title="./post/%E5%85%B6%E4%BB%96/2015-11-02-all-country-list/">
+                        
+                            全部国家列表
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E5%85%B6%E4%BB%96/2015-11-02-all-api/" title="./post/%E5%85%B6%E4%BB%96/2015-11-02-all-api/">
+                        
+                            各种API
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/php/2015-10-29-curl-login/" title="./post/%E6%8A%80%E6%9C%AF/php/2015-10-29-curl-login/">
+                        
+                            curl模拟登陆
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/2015-10-27-msvcr100u-dll/" title="./post/%E6%8A%80%E6%9C%AF/2015-10-27-msvcr100u-dll/">
+                        
+                            如何解决msvcr100.dll丢失问题
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/jquery/2015-10-21-jquery-little-method/" title="./post/%E6%8A%80%E6%9C%AF/jquery/2015-10-21-jquery-little-method/">
+                        
+                            常用的jQuery小技巧
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/php/2015-10-14-php-is-mobile/" title="./post/%E6%8A%80%E6%9C%AF/php/2015-10-14-php-is-mobile/">
+                        
+                            PHP 判断设备是否是手机/平板的方法
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/php/2015-10-10-simple-factory-mode/" title="./post/%E6%8A%80%E6%9C%AF/php/2015-10-10-simple-factory-mode/">
+                        
+                            PHP设计模式之简单工厂模式
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/php/2015-10-10-php-simple-methods/" title="./post/%E6%8A%80%E6%9C%AF/php/2015-10-10-php-simple-methods/">
+                        
+                            简单实用的PHP函数
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/2015-10-09-firefox-mason/" title="./post/%E6%8A%80%E6%9C%AF/2015-10-09-firefox-mason/">
+                        
+                            Firefox域名重定向插件——Mason
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/php/2015-10-09-php-singleton-pattern/" title="./post/%E6%8A%80%E6%9C%AF/php/2015-10-09-php-singleton-pattern/">
+                        
+                            PHP设计模式之单例模式
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/php/2015-09-21-phpexcel/" title="./post/%E6%8A%80%E6%9C%AF/php/2015-09-21-phpexcel/">
+                        
+                            PHPExcel类库的各种使用方法总结
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/laravel/2015-09-01-laravel-build/" title="./post/%E6%8A%80%E6%9C%AF/laravel/2015-09-01-laravel-build/">
+                        
+                            【laravel学习笔记】一、安装
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/laravel/2015-09-11-laravel-route-controller-view/" title="./post/%E6%8A%80%E6%9C%AF/laravel/2015-09-11-laravel-route-controller-view/">
+                        
+                            【laravel学习笔记】二、路由、控制器及视图简介
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/2015-09-01-git-do/" title="./post/%E6%8A%80%E6%9C%AF/2015-09-01-git-do/">
+                        
+                            git常用的一些命令
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/linux/2015-08-31-linux-5/" title="./post/%E6%8A%80%E6%9C%AF/linux/2015-08-31-linux-5/">
+                        
+                            Linux中cp直接覆盖不提示的方法
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/htmlcss/2015-08-20-div-float/" title="./post/%E6%8A%80%E6%9C%AF/htmlcss/2015-08-20-div-float/">
+                        
+                            解决子级float浮动父级无高度没有自适应问题
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/linux/2015-03-19-linux-vi-editor/" title="./post/%E6%8A%80%E6%9C%AF/linux/2015-03-19-linux-vi-editor/">
+                        
+                            linux之vi编辑器命令使用
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/bootstrap/2015-03-26-bootstrap/" title="./post/%E6%8A%80%E6%9C%AF/bootstrap/2015-03-26-bootstrap/">
+                        
+                            bootstrap笔记
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/linux/2015-03-19-linux-1/" title="./post/%E6%8A%80%E6%9C%AF/linux/2015-03-19-linux-1/">
+                        
+                            linux批量替换字符串
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/linux/2015-03-19-linux-2/" title="./post/%E6%8A%80%E6%9C%AF/linux/2015-03-19-linux-2/">
+                        
+                            Linux服务器间文件传输
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/linux/2015-03-19-linux-tar-zip/" title="./post/%E6%8A%80%E6%9C%AF/linux/2015-03-19-linux-tar-zip/">
+                        
+                            打包/压缩目录
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/2015-02-28-sublime-text/" title="./post/%E6%8A%80%E6%9C%AF/2015-02-28-sublime-text/">
+                        
+                            Sublime Text Snippets(代码片段)功能
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/htmlcss/2015-01-01-scroller/" title="./post/%E6%8A%80%E6%9C%AF/htmlcss/2015-01-01-scroller/">
+                        
+                            自定义滚动条样式
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/2015-01-30-markdown/" title="./post/%E6%8A%80%E6%9C%AF/2015-01-30-markdown/">
+                        
+                            标准的markdown格式练习
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/2015-01-01-github-blog/" title="./post/%E6%8A%80%E6%9C%AF/2015-01-01-github-blog/">
+                        
+                            使用Github Pages建独立博客
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/2015-01-01-jekyll/" title="./post/%E6%8A%80%E6%9C%AF/2015-01-01-jekyll/">
+                        
+                            安装Jekyll
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/htmlcss/2014-01-01-css/" title="./post/%E6%8A%80%E6%9C%AF/htmlcss/2014-01-01-css/">
+                        
+                            css笔记
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/jquery/2014-01-01-jquery/" title="./post/%E6%8A%80%E6%9C%AF/jquery/2014-01-01-jquery/">
+                        
+                            jQuery笔记
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/javascript/2014-01-01-js/" title="./post/%E6%8A%80%E6%9C%AF/javascript/2014-01-01-js/">
+                        
+                            js笔记
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/php/2014-01-01-php/" title="./post/%E6%8A%80%E6%9C%AF/php/2014-01-01-php/">
+                        
+                            php知识笔记
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/thinkphp/2014-01-01-thinkphp/" title="./post/%E6%8A%80%E6%9C%AF/thinkphp/2014-01-01-thinkphp/">
+                        
+                            ThinkPHP笔记
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/linux/2014-01-01-linux/" title="./post/%E6%8A%80%E6%9C%AF/linux/2014-01-01-linux/">
+                        
+                            各种常用的Linux操作命令
+                        
+                    </a>
+                </li>
+            
+        
+    </ul>
+
+
+                </li>
+            
+        
+    </ul>
+
+
+</aside>
+<aside class="exapandable"></aside>
+
+
+            
+    <article class="main">
+        <button
+    class="sidebar-toggle-btn"
+    type="menu"
+    aria-expanded="false"
+    aria-haspopup="true">
+    <i class="bi bi-list"></i>
+</button>
+
+
+
+        <div class="title">
+            <h1 class="title-header">
+                linux之vi编辑器命令使用
+            </h1>
+
+            <div class="author-date-readtime">
+                
+
+                    
+                        <div class="author" title="Author">
+                            <i class="bi bi-person"></i>
+                            <a
+                                href="/author/jing-wang/"
+                                class="cat-btn">
+                                Jing Wang
+                            </a>
+                        </div>
+                    
+
+                
+
+                
+                    <div class="date" title="Date">
+                        <i class="bi bi-calendar3"></i>
+                        <time
+                            datetime="2015.04.03"
+                            >2015.04.03
+                        </time>
+                    </div>
+                
+
+                
+                    <div
+                        class="readtime"
+                        title="Time to Read">
+                        <i class="bi bi-clock"></i>
+                        2 mins to read
+                    </div>
+                
+            </div>
+        </div>
+
+        <div class="article-meta">
+            
+                <div class="categories">
+                    <i
+                        class="bi bi-bookmarks"
+                        title="Categories"></i>
+                    
+                        <a
+                            href="/categories/linux/"
+                            class="cat-btn">
+                            linux
+                        </a>
+                    
+                </div>
+            
+
+            
+                <div class="tags">
+                    <i
+                        class="bi bi-tags"
+                        title="Tags"></i>
+                    
+                        <a
+                            href="/tags/linux/"
+                            class="tag-btn">
+                            linux
+                        </a>
+                    
+                        <a
+                            href="/tags/vi/"
+                            class="tag-btn">
+                            vi
+                        </a>
+                    
+                </div>
+            
+
+            
+                <div class="breadcumb">
+                    <i class="bi bi-folder"></i>
+                    
+    
+    
+
+
+
+
+<a href="https://gongvirgil.github.io/" class="bread-btn">
+    
+        <i class="bi bi-house-fill"></i>
+    
+
+    
+        Home
+    
+</a>
+
+
+
+
+    /
+
+
+
+<a href="https://gongvirgil.github.io/post/" class="bread-btn">
+    
+
+    
+        Posts
+    
+</a>
+
+
+
+
+    /
+
+
+
+<a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/linux/2015-03-19-linux-vi-editor/" class="bread-btn">
+    
+
+    
+        
+            linux之vi编辑器命令使用
+        
+
+    
+</a>
+
+                </div>
+            
+
+            
+        </div>
+
+        
+            <nav id="TableOfContents"></nav>
+        
+
+
+        <div class="content">
+            
+                <p>高级一些的编辑器，都会包含宏功能，vim当然不能缺少了，在vim中使用宏是非常方便的：</p>
+<ul>
+<li>:qx     开始记录宏，并将结果存入寄存器x</li>
+<li>q     退出记录模式</li>
+<li>@x     播放记录在x寄存器中的宏命令
+稍微解释一下，当在normal模式下输入:qx后，你对文本的所有编辑动作将会被记录下来，再次输入q即退出了记录模
+式，然后输入@x对刚才记录下来的命令进行重复，此命令后可跟数字，表示要重复多少次，比如@x20，可以重复20次。这个在文本的批处理中是非常有用的。
+同时编辑多个文件
+在vim众多的插件中，有一个叫minibuffer的插件，就是下面所说的标签页功能了，可以支持同时编辑多个文件。</li>
+</ul>
+<!-- raw HTML omitted -->
+<p>##标签命令</p>
+<ul>
+<li>:tabe fn     在一个新的标签页中编辑文件fn</li>
+<li>gt     切换到下一个标签页</li>
+<li>gT     切换到上一个标签页</li>
+<li>:tabr     切换到第一个标签页</li>
+<li>:tabl     切换到最后一个标签页</li>
+<li>:tabm [N]     把当前tab移动到第N个tab之后
+对，正如你所想象的那样，跟eclipse, ue等的标签页是一个意思！
+##窗口命令</li>
+<li>ctrl+w s     水平分割窗口</li>
+<li>ctrl+w w     切换窗口</li>
+<li>ctrl+w q     退出当前窗口(由于同时有多个文件，此命令不会影响其他窗口)</li>
+<li>ctrl+w v     垂直分割窗口
+##其他
+vim在保存之前不会对文件做实际的修改，只是加载到缓冲区中，对文件的编辑其实是对缓冲区的编辑，直到:w时才会存入物理文件。</li>
+<li>:e file     把file加载到新的缓冲区中</li>
+<li>:bn     跳转到下一个缓冲区</li>
+<li>:bd     删除缓冲区(关闭文件)</li>
+<li>:sp fn     分割窗口，并将fn加载到新的窗口中
+##退出编辑器</li>
+<li>:w     将缓冲区写入文件，即保存修改</li>
+<li>:wq     保存修改并退出</li>
+<li>:x     保存修改并退出</li>
+<li>:q     退出，如果对缓冲区进行过修改，则会提示</li>
+<li>:q!     强制退出，放弃修改
+##查找替换</li>
+<li>/pattern     向后搜索字符串pattern</li>
+<li>?pattern     向前搜索字符串pattern</li>
+<li>n     下一个匹配(如果是/搜索，则是向下的下一个，?搜索则是向上的下一个)</li>
+<li>N     上一个匹配(同上)</li>
+<li>:%s/old/new/g     搜索整个文件，将所有的old替换为new</li>
+<li>:%s/old/new/gc     搜索整个文件，将所有的old替换为new，每次都要你确认是否替换
+##复制粘贴</li>
+<li>dd     删除光标所在行</li>
+<li>dw     删除一个字(word)</li>
+<li>x     删除当前字符</li>
+<li>X     删除前一个字符</li>
+<li>D     删除到行末</li>
+<li>yy     复制一行，此命令前可跟数字，标识复制多行，如6yy，表示从当前行开始复制6行</li>
+<li>yw     复制一个字</li>
+<li>y$     复制到行末</li>
+<li>p     粘贴粘贴板的内容到当前行的下面</li>
+<li>P     粘贴粘贴板的内容到当前行的上面</li>
+<li>]p     有缩进的粘贴，vim会自动调节代码的缩进</li>
+<li>&ldquo;a     将内容放入/存入a寄存器，可以支持多粘贴板
+附：比如常用的一个寄存器就是系统寄存器，名称为+，所以从系统粘贴板粘贴到vim中的命令为&rdquo;+p,注意此处的+不表示操作符，二十一个寄存器。
+##移动光标
+在vim中移动光标跟其他的编辑器中有很大的区别，不过一旦学会了，就会飞速的在文本中移动了。</li>
+<li>h,j,k,l     上，下，左，右</li>
+<li>ctrl-f     上翻一页</li>
+<li>ctrl-b     下翻一页</li>
+<li>%     跳到与当前括号匹配的括号处，如当前在{，则跳转到与之匹配的}处</li>
+<li>w     跳到下一个字首，按标点或单词分割</li>
+<li>W     跳到下一个字首，长跳，如end-of-line被认为是一个字</li>
+<li>e     跳到下一个字尾</li>
+<li>E     跳到下一个字尾，长跳</li>
+<li>b     跳到上一个字</li>
+<li>B     跳到上一个字，长跳</li>
+<li>0     跳至行首，不管有无缩进，就是跳到第0个字符</li>
+<li>^     跳至行首的第一个字符</li>
+<li>$     跳至行尾</li>
+<li>gg     跳至文件的第一行</li>
+<li>gd     跳至当前光标所在的变量的声明处</li>
+<li>[N]G     跳到第N行，如0G，就等价于gg，100G就是第100行</li>
+<li>fx     在当前行中找x字符，找到了就跳转至</li>
+<li>;     重复上一个f命令，而不用重复的输入fx</li>
+<li>tx     与fx类似，但是只是跳转到x的前一个字符处</li>
+<li>Fx     跟fx的方向相反*</li>
+<li>),(     跳转到上/下一个语句*</li>
+<li>
+<ul>
+<li>
+<pre><code>查找光标所在处的单词，向下查找
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<h1 id="查找光标所在处的单词向上查找">查找光标所在处的单词，向上查找</h1>
+</li>
+<li>`.     跳转至上次编辑位置
+##在屏幕上移动</li>
+<li>H     移动光标到当前屏幕上最上边的一行</li>
+<li>M     移动光标到当前屏幕上中间的一行</li>
+<li>L     移动光标到当前屏幕上最下边的一行
+##书签</li>
+<li>ma     把当前位置存成标签a</li>
+<li>`a     跳转到标签a处
+##编辑</li>
+<li>r     替换一个字符</li>
+<li>J     将下一行和当前行连接为一行</li>
+<li>cc     删除当前行并进入编辑模式</li>
+<li>cw     删除当前字，并进入编辑模式</li>
+<li>c$     擦除从当前位置至行末的内容，并进入编辑模式</li>
+<li>s     删除当前字符并进入编辑模式</li>
+<li>S     删除光标所在行并进入编辑模式</li>
+<li>xp     交换当前字符和下一个字符</li>
+<li>u     撤销</li>
+<li>ctrl+r     重做</li>
+<li>.     重复上一个编辑命令</li>
+<li>~     切换大小写，当前字符*</li>
+<li>g~iw     切换当前字的大小写</li>
+<li>gUiw     将当前字变成大写</li>
+<li>guiw     将当前字变成小写</li>
+<li>
+<blockquote>
+<blockquote>
+<pre><code>将当前行右移一个单位
+</code></pre>
+</blockquote>
+</blockquote>
+</li>
+<li>&laquo;     将当前行左移一个单位(一个tab符)</li>
+<li>==     自动缩进当前行</li>
+<li>插入模式</li>
+<li>i     从当前光标处进入插入模式</li>
+<li>I     进入插入模式，并置光标于行首</li>
+<li>a     追加模式，置光标于当前光标之后</li>
+<li>A     追加模式，置光标于行末</li>
+<li>o     在当前行之下新加一行，并进入插入模式</li>
+<li>O     在当前行之上新加一行，并进入插入模式</li>
+<li>Esc     退出插入模式
+##可视模式
+###标记文本</li>
+<li>v     进入可视模式，单字符模式</li>
+<li>V     进入可视模式，行模式*</li>
+<li>ctrl+v     进入可视模式，列模式，类似于UE的列模式</li>
+<li>o     跳转光标到选中块的另一个端点</li>
+<li>U     将选中块中的内容转成大写</li>
+<li>O     跳转光标到块的另一个端点</li>
+<li>aw     选中一个字</li>
+<li>ab     选中括号中的所有内容，包括括号本身</li>
+<li>aB     选中{}括号中的所有内容</li>
+<li>ib     选中括号中的内容，不含括号</li>
+<li>iB     选中{}中的内容，不含{}
+###对标记进行动作</li>
+<li>
+<blockquote>
+<pre><code>块右移
+</code></pre>
+</blockquote>
+</li>
+<li>&lt;     块左移</li>
+<li>y     复制块</li>
+<li>d     删除块</li>
+<li>~     切换块中内容的大小写</li>
+</ul>
+
+            
+        </div>
+    </article>
+
+        </main>
+
+        <footer class="footer">
+    <div class="footer-left">
+        <ul class="social">
+            
+                <li>All Rights Reserved ®.</li>
+            
+
+            
+                <li>Jing Wang</li>
+            
+
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        </ul>
+    </div>
+
+    <div class="footer-right">
+        <ul class="control status clearfix">
+            
+                <li>
+                    
+                        Word Count:
+                        248
+                    
+                </li>
+            
+
+            
+            
+
+            
+                <li>en</li>
+            
+
+            
+                <li>
+                    <a href="https://gohugo.io" class="btn" target="_blank"
+                        >Hugo: 0.121.2</a
+                    >
+                </li>
+            
+
+            
+                <li>
+                    <a
+                        href="https://github.com/JingWangTW/dark-theme-editor"
+                        class="btn"
+                        target="_blank"
+                        >Theme: dark-theme-editor</a
+                    >
+                </li>
+            
+
+            
+                <li>
+                    
+                        Last modified: &nbsp;
+                        <time>
+                            Apr 03 2015 00:00:00
+                        </time>
+                    
+                </li>
+            
+
+            
+                <li title="">
+                    
+                </li>
+            
+        </ul>
+    </div>
+</footer>
+
+    </body>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+
+    
+    
+
+
+    <script
+        type="text/javascript"
+        src="/js/index_d751713.min.5eeb120f16ea146352725c420364f87befead45f678142b8f0ffbef024646931fbc06bff07a7bd6cb57fa2f8cd8a21ba6a4ee5a278ec32303a378bc1cd17f246.js"
+        integrity="sha512-XusSDxbqFGNSclxCA2T4e&#43;/q1F9ngUK48P&#43;&#43;8CRkaTH7wGv/B6e9bLV/ovjNiiG6ak7lonjsMjA6N4vBzRfyRg=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+
+
+
+
+</html>

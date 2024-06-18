@@ -1,0 +1,1468 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="generator" content="Hugo 0.121.2">
+
+    
+
+    
+
+    
+        
+            <meta name="description" content="几种常见的PHP加密算法" />
+        
+
+        
+            <meta
+                name="keywords"
+                content="hugo,site,new" />
+        
+
+        
+            <meta
+                name="author"
+                content="Jing Wang" />
+        
+
+    
+
+
+    <title>
+        
+            几种常见的PHP加密算法 |
+            My New Hugo Site
+        
+    </title>
+
+    
+
+
+    
+    
+
+    
+    
+
+
+    
+    
+
+
+    
+    
+
+
+    
+    
+
+    
+
+
+    
+    
+
+    
+
+    
+
+        
+        
+
+
+        
+        
+
+
+        <link
+            rel="stylesheet"
+            href="/css/index_d751713.min.912d03bce61461ecbc3ca083479e1ed814bba94df76d0bdc6aa88fdca33621b9bb410dc2c81af31e8101fec62decfa5f6e48901ad673bc5056d2f1d1f2368a34.css"
+            integrity="sha512-kS0DvOYUYey8PKCDR54e2BS7qU33bQvcaqiP3KM2Ibm7QQ3CyBrzHoEB/sYt7PpfbkiQGtZzvFBW0vHR8jaKNA==" />
+    
+
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+</head>
+
+
+
+    <body>
+        <header class="header">
+    <div class="header_left">
+        
+    </div>
+
+    <div class="header_middle">
+        
+            几种常见的PHP加密算法 -
+            My New Hugo Site
+        
+    </div>
+</header>
+
+
+
+        <main>
+            <aside class="sidebar">
+    
+
+
+
+    
+    
+
+    
+    
+
+
+    <ul class="section-tree">
+        
+            
+                <li
+                    
+                        class="dir opened-dir"
+                    >
+                    <span class="dir-text"> Posts </span>
+
+                    
+
+
+
+    
+    
+
+    
+    
+
+
+    <ul class="section-tree">
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/llm/2024-06-18-learn-lang-chain/" title="./post/%E6%8A%80%E6%9C%AF/llm/2024-06-18-learn-lang-chain/">
+                        
+                            手把手教你认识学会LangChain
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/llm/2024-06-18-text-to-vec/" title="./post/%E6%8A%80%E6%9C%AF/llm/2024-06-18-text-to-vec/">
+                        
+                            文本向量化
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/linux/2018-05-25-cron-session-log/" title="./post/%E6%8A%80%E6%9C%AF/linux/2018-05-25-cron-session-log/">
+                        
+                            session opened/closed for user root by (uid=0)
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/php/2017-07-17-anonymous-function/" title="./post/%E6%8A%80%E6%9C%AF/php/2017-07-17-anonymous-function/">
+                        
+                            PHP代码之使用匿名函数
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/php/2017-07-17-use-/" title="./post/%E6%8A%80%E6%9C%AF/php/2017-07-17-use-/">
+                        
+                            PHP代码之使用引用
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/php/2017-07-17-interface/" title="./post/%E6%8A%80%E6%9C%AF/php/2017-07-17-interface/">
+                        
+                            PHP类的接口`interface`
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/php/2017-06-23-composer-exceeded-time/" title="./post/%E6%8A%80%E6%9C%AF/php/2017-06-23-composer-exceeded-time/">
+                        
+                            Composer错误：exceeded the timeout of 300 seconds
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/php/2017-06-13-switch-between-multiple-php-version-on-ubuntu/" title="./post/%E6%8A%80%E6%9C%AF/php/2017-06-13-switch-between-multiple-php-version-on-ubuntu/">
+                        
+                            Ubuntu上在多个PHP版本之间切换
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/php/2017-04-01-php-recursion-memory-problem/" title="./post/%E6%8A%80%E6%9C%AF/php/2017-04-01-php-recursion-memory-problem/">
+                        
+                            递归时内存占用问题
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/mysql/2016-11-22-ubuntu-mysql-connect/" title="./post/%E6%8A%80%E6%9C%AF/mysql/2016-11-22-ubuntu-mysql-connect/">
+                        
+                            解决Ubuntu远程连接mysql连不上的问题
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/2016-11-01-shell-dos-fault/" title="./post/%E6%8A%80%E6%9C%AF/2016-11-01-shell-dos-fault/">
+                        
+                            Linux下执行shell提示错误syntax error:unexpected end of file
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/2016-09-29-mbp-router-wifi/" title="./post/%E6%8A%80%E6%9C%AF/2016-09-29-mbp-router-wifi/">
+                        
+                            Macbook pro连接无线路由不稳定掉线的解决办法
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/2015-05-11-ajax-cross-domain-with-cookies/" title="./post/%E6%8A%80%E6%9C%AF/2015-05-11-ajax-cross-domain-with-cookies/">
+                        
+                            Ajax跨域请求带上cookies
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/git/2016-04-14-git-bash-change-initial-directory/" title="./post/%E6%8A%80%E6%9C%AF/git/2016-04-14-git-bash-change-initial-directory/">
+                        
+                            Git Bash 更改初始目录
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/2016-04-14-skype-port-80/" title="./post/%E6%8A%80%E6%9C%AF/2016-04-14-skype-port-80/">
+                        
+                            Skype打开默认占用80端口问题
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E8%8D%89%E7%A8%BF/2016-03-30-some-questions-met/" title="./post/%E8%8D%89%E7%A8%BF/2016-03-30-some-questions-met/">
+                        
+                            面试中遇到的一些问题总结
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E8%8D%89%E7%A8%BF/2016-03-29-svn-git-diff/" title="./post/%E8%8D%89%E7%A8%BF/2016-03-29-svn-git-diff/">
+                        
+                            svn与git的一些区别
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/2016-03-16-memcache/" title="./post/%E6%8A%80%E6%9C%AF/2016-03-16-memcache/">
+                        
+                            Memcache整理
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/php/2016-03-04-php-encrypt-method/" title="./post/%E6%8A%80%E6%9C%AF/php/2016-03-04-php-encrypt-method/">
+                        
+                            几种常见的PHP加密算法
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E8%8D%89%E7%A8%BF/2016-03-02-dangerously-set-innerhtml/" title="./post/%E8%8D%89%E7%A8%BF/2016-03-02-dangerously-set-innerhtml/">
+                        
+                            React学习 之 Dangerously Set innerHTML
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/javascript/2016-03-01-useragent-is-weixin-browser/" title="./post/%E6%8A%80%E6%9C%AF/javascript/2016-03-01-useragent-is-weixin-browser/">
+                        
+                            微信内置浏览器UserAgent的判断
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E8%8D%89%E7%A8%BF/2016-02-29-mac-composer-install-problem/" title="./post/%E8%8D%89%E7%A8%BF/2016-02-29-mac-composer-install-problem/">
+                        
+                            Mac下安装composer遇到的问题
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/linux/2015-12-29-shell-check-server/" title="./post/%E6%8A%80%E6%9C%AF/linux/2015-12-29-shell-check-server/">
+                        
+                            自动检测程序正常运行，遇故障则重启服务
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/php/2015-12-25-redis&#43;mysql&#43;php-high-concurrence/" title="./post/%E6%8A%80%E6%9C%AF/php/2015-12-25-redis&#43;mysql&#43;php-high-concurrence/">
+                        
+                            【高并发简单解决方案】redis队列缓存 &#43; mysql 批量入库 &#43; php离线整合
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/php/2015-12-25-php-timing-task/" title="./post/%E6%8A%80%E6%9C%AF/php/2015-12-25-php-timing-task/">
+                        
+                            PHP设置定时任务的实现方法
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/php/2015-12-25-ip-to-address/" title="./post/%E6%8A%80%E6%9C%AF/php/2015-12-25-ip-to-address/">
+                        
+                            根据ip查询所在地
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/2015-12-23-preg-start/" title="./post/%E6%8A%80%E6%9C%AF/2015-12-23-preg-start/">
+                        
+                            正则表达式基础语法
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/2015-12-21-awesome-machine-learning/" title="./post/%E6%8A%80%E6%9C%AF/2015-12-21-awesome-machine-learning/">
+                        
+                            Awesome Machine Learning
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E7%94%9F%E6%B4%BB/2015-12-18-100-years-of-beauty/" title="./post/%E7%94%9F%E6%B4%BB/2015-12-18-100-years-of-beauty/">
+                        
+                            100 Years of Beauty
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/javascript/2015-12-18-javascript-array-function/" title="./post/%E6%8A%80%E6%9C%AF/javascript/2015-12-18-javascript-array-function/">
+                        
+                            Javascript各种数组方法
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/mysql/2015-12-17-mysql-update-varies-value/" title="./post/%E6%8A%80%E6%9C%AF/mysql/2015-12-17-mysql-update-varies-value/">
+                        
+                            mysql批量更新多条记录的不同值
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/php/2015-12-17-php-files-directory/" title="./post/%E6%8A%80%E6%9C%AF/php/2015-12-17-php-files-directory/">
+                        
+                            php获取文件夹下所有文件，包含子文件夹
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/php/2015-12-16-php-run-time/" title="./post/%E6%8A%80%E6%9C%AF/php/2015-12-16-php-run-time/">
+                        
+                            PHP调试执行时间
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/2015-12-06-win10-pid4-system/" title="./post/%E6%8A%80%E6%9C%AF/2015-12-06-win10-pid4-system/">
+                        
+                            win10下80端口被PID为4的System占用问题
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/php/2015-12-15-shortcut-save-url/" title="./post/%E6%8A%80%E6%9C%AF/php/2015-12-15-shortcut-save-url/">
+                        
+                            收藏到桌面的快捷方式
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/htmlcss/2015-12-10-ui-elements/" title="./post/%E6%8A%80%E6%9C%AF/htmlcss/2015-12-10-ui-elements/">
+                        
+                            各种常见的UI元素
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/jquery/2014-12-08-jquery-plugin/" title="./post/%E6%8A%80%E6%9C%AF/jquery/2014-12-08-jquery-plugin/">
+                        
+                            jQuery插件开发笔记
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/2015-12-06-shell-method-terminal/" title="./post/%E6%8A%80%E6%9C%AF/2015-12-06-shell-method-terminal/">
+                        
+                            执行系统命令的函数
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/2015-12-03-jekyll-template-grammer/" title="./post/%E6%8A%80%E6%9C%AF/2015-12-03-jekyll-template-grammer/">
+                        
+                            Jekyll模板变量&amp;语法
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/php/2015-12-03-php-zip-so/" title="./post/%E6%8A%80%E6%9C%AF/php/2015-12-03-php-zip-so/">
+                        
+                            测试phpexcel后报错Class &#39;ZipArchive&#39; not found解决方法
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/jquery/2015-12-02-jquery-plugin-template/" title="./post/%E6%8A%80%E6%9C%AF/jquery/2015-12-02-jquery-plugin-template/">
+                        
+                            jQuery插件模板
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/php/2015-12-02-memcache/" title="./post/%E6%8A%80%E6%9C%AF/php/2015-12-02-memcache/">
+                        
+                            Memcache基本教程
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/2014-12-01-one-line-browser-notepad/" title="./post/%E6%8A%80%E6%9C%AF/2014-12-01-one-line-browser-notepad/">
+                        
+                            一行代码，浏览器变临时编辑器
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/php/2015-12-01-php-zend_search_lucene-cn-search/" title="./post/%E6%8A%80%E6%9C%AF/php/2015-12-01-php-zend_search_lucene-cn-search/">
+                        
+                            使用PHP&#43;Zend_Search_Lucene做全站中文搜索引擎
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/mysql/2015-11-26-mysql-rand-n-row/" title="./post/%E6%8A%80%E6%9C%AF/mysql/2015-11-26-mysql-rand-n-row/">
+                        
+                            从Mysql某一表中随机读取n条数据的SQL查询语句
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/2015-11-19-data-hiding-in-image/" title="./post/%E6%8A%80%E6%9C%AF/2015-11-19-data-hiding-in-image/">
+                        
+                            用图片隐藏信息的技术实现
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E5%85%B6%E4%BB%96/2015-11-02-all-country-list/" title="./post/%E5%85%B6%E4%BB%96/2015-11-02-all-country-list/">
+                        
+                            全部国家列表
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E5%85%B6%E4%BB%96/2015-11-02-all-api/" title="./post/%E5%85%B6%E4%BB%96/2015-11-02-all-api/">
+                        
+                            各种API
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/php/2015-10-29-curl-login/" title="./post/%E6%8A%80%E6%9C%AF/php/2015-10-29-curl-login/">
+                        
+                            curl模拟登陆
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/2015-10-27-msvcr100u-dll/" title="./post/%E6%8A%80%E6%9C%AF/2015-10-27-msvcr100u-dll/">
+                        
+                            如何解决msvcr100.dll丢失问题
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/jquery/2015-10-21-jquery-little-method/" title="./post/%E6%8A%80%E6%9C%AF/jquery/2015-10-21-jquery-little-method/">
+                        
+                            常用的jQuery小技巧
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/php/2015-10-14-php-is-mobile/" title="./post/%E6%8A%80%E6%9C%AF/php/2015-10-14-php-is-mobile/">
+                        
+                            PHP 判断设备是否是手机/平板的方法
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/php/2015-10-10-simple-factory-mode/" title="./post/%E6%8A%80%E6%9C%AF/php/2015-10-10-simple-factory-mode/">
+                        
+                            PHP设计模式之简单工厂模式
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/php/2015-10-10-php-simple-methods/" title="./post/%E6%8A%80%E6%9C%AF/php/2015-10-10-php-simple-methods/">
+                        
+                            简单实用的PHP函数
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/2015-10-09-firefox-mason/" title="./post/%E6%8A%80%E6%9C%AF/2015-10-09-firefox-mason/">
+                        
+                            Firefox域名重定向插件——Mason
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/php/2015-10-09-php-singleton-pattern/" title="./post/%E6%8A%80%E6%9C%AF/php/2015-10-09-php-singleton-pattern/">
+                        
+                            PHP设计模式之单例模式
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/php/2015-09-21-phpexcel/" title="./post/%E6%8A%80%E6%9C%AF/php/2015-09-21-phpexcel/">
+                        
+                            PHPExcel类库的各种使用方法总结
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/laravel/2015-09-01-laravel-build/" title="./post/%E6%8A%80%E6%9C%AF/laravel/2015-09-01-laravel-build/">
+                        
+                            【laravel学习笔记】一、安装
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/laravel/2015-09-11-laravel-route-controller-view/" title="./post/%E6%8A%80%E6%9C%AF/laravel/2015-09-11-laravel-route-controller-view/">
+                        
+                            【laravel学习笔记】二、路由、控制器及视图简介
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/2015-09-01-git-do/" title="./post/%E6%8A%80%E6%9C%AF/2015-09-01-git-do/">
+                        
+                            git常用的一些命令
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/linux/2015-08-31-linux-5/" title="./post/%E6%8A%80%E6%9C%AF/linux/2015-08-31-linux-5/">
+                        
+                            Linux中cp直接覆盖不提示的方法
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/htmlcss/2015-08-20-div-float/" title="./post/%E6%8A%80%E6%9C%AF/htmlcss/2015-08-20-div-float/">
+                        
+                            解决子级float浮动父级无高度没有自适应问题
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/linux/2015-03-19-linux-vi-editor/" title="./post/%E6%8A%80%E6%9C%AF/linux/2015-03-19-linux-vi-editor/">
+                        
+                            linux之vi编辑器命令使用
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/bootstrap/2015-03-26-bootstrap/" title="./post/%E6%8A%80%E6%9C%AF/bootstrap/2015-03-26-bootstrap/">
+                        
+                            bootstrap笔记
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/linux/2015-03-19-linux-1/" title="./post/%E6%8A%80%E6%9C%AF/linux/2015-03-19-linux-1/">
+                        
+                            linux批量替换字符串
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/linux/2015-03-19-linux-2/" title="./post/%E6%8A%80%E6%9C%AF/linux/2015-03-19-linux-2/">
+                        
+                            Linux服务器间文件传输
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/linux/2015-03-19-linux-tar-zip/" title="./post/%E6%8A%80%E6%9C%AF/linux/2015-03-19-linux-tar-zip/">
+                        
+                            打包/压缩目录
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/2015-02-28-sublime-text/" title="./post/%E6%8A%80%E6%9C%AF/2015-02-28-sublime-text/">
+                        
+                            Sublime Text Snippets(代码片段)功能
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/htmlcss/2015-01-01-scroller/" title="./post/%E6%8A%80%E6%9C%AF/htmlcss/2015-01-01-scroller/">
+                        
+                            自定义滚动条样式
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/2015-01-30-markdown/" title="./post/%E6%8A%80%E6%9C%AF/2015-01-30-markdown/">
+                        
+                            标准的markdown格式练习
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/2015-01-01-github-blog/" title="./post/%E6%8A%80%E6%9C%AF/2015-01-01-github-blog/">
+                        
+                            使用Github Pages建独立博客
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/2015-01-01-jekyll/" title="./post/%E6%8A%80%E6%9C%AF/2015-01-01-jekyll/">
+                        
+                            安装Jekyll
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/htmlcss/2014-01-01-css/" title="./post/%E6%8A%80%E6%9C%AF/htmlcss/2014-01-01-css/">
+                        
+                            css笔记
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/jquery/2014-01-01-jquery/" title="./post/%E6%8A%80%E6%9C%AF/jquery/2014-01-01-jquery/">
+                        
+                            jQuery笔记
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/javascript/2014-01-01-js/" title="./post/%E6%8A%80%E6%9C%AF/javascript/2014-01-01-js/">
+                        
+                            js笔记
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/php/2014-01-01-php/" title="./post/%E6%8A%80%E6%9C%AF/php/2014-01-01-php/">
+                        
+                            php知识笔记
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/thinkphp/2014-01-01-thinkphp/" title="./post/%E6%8A%80%E6%9C%AF/thinkphp/2014-01-01-thinkphp/">
+                        
+                            ThinkPHP笔记
+                        
+                    </a>
+                </li>
+            
+        
+            
+                <li class="file">
+                    <a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/linux/2014-01-01-linux/" title="./post/%E6%8A%80%E6%9C%AF/linux/2014-01-01-linux/">
+                        
+                            各种常用的Linux操作命令
+                        
+                    </a>
+                </li>
+            
+        
+    </ul>
+
+
+                </li>
+            
+        
+    </ul>
+
+
+</aside>
+<aside class="exapandable"></aside>
+
+
+            
+    <article class="main">
+        <button
+    class="sidebar-toggle-btn"
+    type="menu"
+    aria-expanded="false"
+    aria-haspopup="true">
+    <i class="bi bi-list"></i>
+</button>
+
+
+
+        <div class="title">
+            <h1 class="title-header">
+                几种常见的PHP加密算法
+            </h1>
+
+            <div class="author-date-readtime">
+                
+
+                    
+                        <div class="author" title="Author">
+                            <i class="bi bi-person"></i>
+                            <a
+                                href="/author/jing-wang/"
+                                class="cat-btn">
+                                Jing Wang
+                            </a>
+                        </div>
+                    
+
+                
+
+                
+                    <div class="date" title="Date">
+                        <i class="bi bi-calendar3"></i>
+                        <time
+                            datetime="2016.03.04"
+                            >2016.03.04
+                        </time>
+                    </div>
+                
+
+                
+                    <div
+                        class="readtime"
+                        title="Time to Read">
+                        <i class="bi bi-clock"></i>
+                        4 mins to read
+                    </div>
+                
+            </div>
+        </div>
+
+        <div class="article-meta">
+            
+                <div class="categories">
+                    <i
+                        class="bi bi-bookmarks"
+                        title="Categories"></i>
+                    
+                        <a
+                            href="/categories/php/"
+                            class="cat-btn">
+                            php
+                        </a>
+                    
+                </div>
+            
+
+            
+                <div class="tags">
+                    <i
+                        class="bi bi-tags"
+                        title="Tags"></i>
+                    
+                        <a
+                            href="/tags/php/"
+                            class="tag-btn">
+                            PHP
+                        </a>
+                    
+                        <a
+                            href="/tags/encrypt/"
+                            class="tag-btn">
+                            encrypt
+                        </a>
+                    
+                </div>
+            
+
+            
+                <div class="breadcumb">
+                    <i class="bi bi-folder"></i>
+                    
+    
+    
+
+
+
+
+<a href="https://gongvirgil.github.io/" class="bread-btn">
+    
+        <i class="bi bi-house-fill"></i>
+    
+
+    
+        Home
+    
+</a>
+
+
+
+
+    /
+
+
+
+<a href="https://gongvirgil.github.io/post/" class="bread-btn">
+    
+
+    
+        Posts
+    
+</a>
+
+
+
+
+    /
+
+
+
+<a href="https://gongvirgil.github.io/post/%E6%8A%80%E6%9C%AF/php/2016-03-04-php-encrypt-method/" class="bread-btn">
+    
+
+    
+        
+            几种常见的PHP加密算法
+        
+
+    
+</a>
+
+                </div>
+            
+
+            
+        </div>
+
+        
+            <nav id="TableOfContents"></nav>
+        
+
+
+        <div class="content">
+            
+                <p>##Discuz authcode</p>
+<pre><code>&lt;?php
+    /** 
+     * $string 明文或密文
+     * $operation 加密ENCODE或解密DECODE
+     * $key 密钥
+     * $expiry 密钥有效期
+     */
+    function authcode($string, $operation = 'DECODE', $key = '', $expiry = 0) {
+        // 动态密匙长度，相同的明文会生成不同密文就是依靠动态密匙
+        // 加入随机密钥，可以令密文无任何规律，即便是原文和密钥完全相同，加密结果也会每次不同，增大破解难度。
+        // 取值越大，密文变动规律越大，密文变化 = 16 的 $ckey_length 次方
+        // 当此值为 0 时，则不产生随机密钥
+        $ckey_length = 4;
+        // 密匙
+        // $GLOBALS['discuz_auth_key'] 这里可以根据自己的需要修改
+        $key = md5($key ? $key : $GLOBALS['discuz_auth_key']);
+        // 密匙a会参与加解密
+        $keya = md5(substr($key, 0, 16));
+        // 密匙b会用来做数据完整性验证
+        $keyb = md5(substr($key, 16, 16));
+        // 密匙c用于变化生成的密文
+        $keyc = $ckey_length ? ($operation == 'DECODE' ? substr($string, 0, $ckey_length) : substr(md5(microtime()) , -$ckey_length)) : '';
+        // 参与运算的密匙
+        $cryptkey = $keya . md5($keya . $keyc);
+        $key_length = strlen($cryptkey);
+        // 明文，前10位用来保存时间戳，解密时验证数据有效性，10到26位用来保存$keyb(密匙b)，解密时会通过这个密匙验证数据完整性
+        // 如果是解码的话，会从第$ckey_length位开始，因为密文前$ckey_length位保存 动态密匙，以保证解密正确
+        $string = $operation == 'DECODE' ? base64_decode(substr($string, $ckey_length)) : sprintf('%010d', $expiry ? $expiry + time() : 0) . substr(md5($string . $keyb) , 0, 16) . $string;
+        $string_length = strlen($string);
+        $result = '';
+        $box = range(0, 255);
+        $rndkey = array();
+        // 产生密匙簿
+        for ($i = 0; $i &lt;= 255; $i++) {
+            $rndkey[$i] = ord($cryptkey[$i % $key_length]);
+        }
+        // 用固定的算法，打乱密匙簿，增加随机性，好像很复杂，实际上并不会增加密文的强度
+        for ($j = $i = 0; $i &lt; 256; $i++) {
+            $j = ($j + $box[$i] + $rndkey[$i]) % 256;
+            $tmp = $box[$i];
+            $box[$i] = $box[$j];
+            $box[$j] = $tmp;
+        }
+        // 核心加解密部分
+        for ($a = $j = $i = 0; $i &lt; $string_length; $i++) {
+            $a = ($a + 1) % 256;
+            $j = ($j + $box[$a]) % 256;
+            $tmp = $box[$a];
+            $box[$a] = $box[$j];
+            $box[$j] = $tmp;
+            // 从密匙簿得出密匙进行异或，再转成字符
+            $result.= chr(ord($string[$i]) ^ ($box[($box[$a] + $box[$j]) % 256]));
+        }
+        if ($operation == 'DECODE') {
+            // substr($result, 0, 10) == 0 验证数据有效性
+            // substr($result, 0, 10) - time() &gt; 0 验证数据有效性
+            // substr($result, 10, 16) == substr(md5(substr($result, 26).$keyb), 0, 16) 验证数据完整性
+            // 验证数据有效性，请看未加密明文的格式
+            if ((substr($result, 0, 10) == 0 || substr($result, 0, 10) - time() &gt; 0) &amp;&amp; substr($result, 10, 16) == substr(md5(substr($result, 26) . $keyb) , 0, 16)) {
+                return substr($result, 26);
+            } else {
+                return '';
+            }
+        } else {
+            // 把动态密匙保存在密文里，这也是为什么同样的明文，生产不同密文后能解密的原因
+            // 因为加密后的密文可能是一些特殊字符，复制过程可能会丢失，所以用base64编码
+            return $keyc . str_replace('=', '', base64_encode($result));
+        }
+    }
+    $a = &quot;www.test.com&quot;;
+    $b = authcode($a, &quot;ENCODE&quot;, &quot;abc123&quot;);
+    echo $b . &quot;&lt;br/&gt;&quot;;
+    echo authcode($b, &quot;DECODE&quot;, &quot;abc123&quot;);
+?&gt;
+</code></pre>
+<!-- raw HTML omitted -->
+<p>##简单对称加密算法</p>
+<pre><code>&lt;?php
+    /** 
+     * 简单对称加密算法之加密
+     * @param String $string 需要加密的字串
+     * @param String $skey 加密EKY
+     * @author Anyon Zou &lt;zoujingli@qq.com&gt;
+     * @date 2013-08-13 19:30
+     * @update 2014-10-10 10:10
+     * @return String
+     */
+    function encode($string = '', $skey = 'cxphp') {
+        $strArr = str_split(base64_encode($string));
+        $strCount = count($strArr);
+        foreach (str_split($skey) as $key =&gt; $value) $key &lt; $strCount &amp;&amp; $strArr[$key].= $value;
+        return str_replace(array(
+            '=',
+            '+',
+            '/'
+        ) , array(
+            'O0O0O',
+            'o000o',
+            'oo00o'
+        ) , join('', $strArr));
+    }
+    /** 
+     * 简单对称加密算法之解密
+     * @param String $string 需要解密的字串
+     * @param String $skey 解密KEY
+     * @author Anyon Zou &lt;zoujingli@qq.com&gt;
+     * @date 2013-08-13 19:30
+     * @update 2014-10-10 10:10
+     * @return String
+     */
+    function decode($string = '', $skey = 'cxphp') {
+        $strArr = str_split(str_replace(array(
+            'O0O0O',
+            'o000o',
+            'oo00o'
+        ) , array(
+            '=',
+            '+',
+            '/'
+        ) , $string) , 2);
+        $strCount = count($strArr);
+        foreach (str_split($skey) as $key =&gt; $value) $key &lt;= $strCount &amp;&amp; isset($strArr[$key]) &amp;&amp; $strArr[$key][1] === $value &amp;&amp; $strArr[$key] = $strArr[$key][0];
+        return base64_decode(join('', $strArr));
+    }
+    echo '&lt;pre&gt;';
+    $str = '56,15123365247,54,四大古典风格';
+    echo &quot;string : &quot; . $str . &quot; &lt;br /&gt;&quot;;
+    echo &quot;encode : &quot; . ($enstring = encode($str)) . '&lt;br /&gt;';
+    echo &quot;decode : &quot; . decode($enstring);
+?&gt;
+</code></pre>
+<p>##DES加密解密</p>
+<pre><code>&lt;?php
+    class DES {
+        public $key;
+        public $iv; //偏移量
+        function __construct($key, $iv = 0) {
+            $this-&gt;key = $key;
+            if ($iv == 0) {
+                $this-&gt;iv = $key;
+            } else {
+                $this-&gt;iv = $iv;
+            }
+        }
+        //加密
+        function encrypt($str) {
+            $size = mcrypt_get_block_size(MCRYPT_DES, MCRYPT_MODE_CBC);
+            $str = $this-&gt;pkcs5Pad($str, $size);
+            $data = mcrypt_cbc(MCRYPT_DES, $this-&gt;key, $str, MCRYPT_ENCRYPT, $this-&gt;iv);
+            //$data=strtoupper(bin2hex($data)); //返回大写十六进制字符串
+            return base64_encode($data);
+        }
+        //解密
+        function decrypt($str) {
+            $str = base64_decode($str);
+            //$strBin = $this-&gt;hex2bin( strtolower($str));
+            $str = mcrypt_cbc(MCRYPT_DES, $this-&gt;key, $str, MCRYPT_DECRYPT, $this-&gt;iv);
+            $str = $this-&gt;pkcs5Unpad($str);
+            return $str;
+        }
+        function hex2bin($hexData) {
+            $binData = &quot;&quot;;
+            for ($i = 0; $i &lt; strlen($hexData); $i+= 2) {
+                $binData.= chr(hexdec(substr($hexData, $i, 2)));
+            }
+            return $binData;
+        }
+        function pkcs5Pad($text, $blocksize) {
+            $pad = $blocksize - (strlen($text) % $blocksize);
+            return $text . str_repeat(chr($pad) , $pad);
+        }
+        function pkcs5Unpad($text) {
+            $pad = ord($text{strlen($text) - 1});
+            if ($pad &gt; strlen($text)) return false;
+            if (strspn($text, chr($pad) , strlen($text) - $pad) != $pad) return false;
+            return substr($text, 0, -1 * $pad);
+        }
+    }
+    $str = 'abc';
+    $key = '12345678'; //8位内
+    $crypt = new DES($key);
+    $mstr = $crypt-&gt;encrypt($str);
+    $str = $crypt-&gt;decrypt($mstr);
+    echo $str . ' &lt;=&gt; ' . $mstr;
+?&gt;
+</code></pre>
+<p>##PHP hexXbin</p>
+<pre><code>&lt;?php
+    function hexXbin($data, $types = false) {
+        if (!is_string($data)) return 0;
+        if ($types === false) {
+            $len = strlen($data);
+            if ($len % 2) {
+                return 0;
+            } else if (strspn($data, '0123456789abcdefABCDEF') != $len) {
+                return 0;
+            }
+            return pack('H*', $data);
+        } else {
+            return bin2hex($data);
+        }
+    }
+    echo $t = hexXbin('XN中国人(  ADｄｗｅｒｅ)zQ4MzUwOTcy==', true);
+    echo '&lt;br /&gt;';
+    echo hexXbin($t);
+?&gt;
+</code></pre>
+
+            
+        </div>
+    </article>
+
+        </main>
+
+        <footer class="footer">
+    <div class="footer-left">
+        <ul class="social">
+            
+                <li>All Rights Reserved ®.</li>
+            
+
+            
+                <li>Jing Wang</li>
+            
+
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        </ul>
+    </div>
+
+    <div class="footer-right">
+        <ul class="control status clearfix">
+            
+                <li>
+                    
+                        Word Count:
+                        780
+                    
+                </li>
+            
+
+            
+            
+
+            
+                <li>en</li>
+            
+
+            
+                <li>
+                    <a href="https://gohugo.io" class="btn" target="_blank"
+                        >Hugo: 0.121.2</a
+                    >
+                </li>
+            
+
+            
+                <li>
+                    <a
+                        href="https://github.com/JingWangTW/dark-theme-editor"
+                        class="btn"
+                        target="_blank"
+                        >Theme: dark-theme-editor</a
+                    >
+                </li>
+            
+
+            
+                <li>
+                    
+                        Last modified: &nbsp;
+                        <time>
+                            Mar 04 2016 00:00:00
+                        </time>
+                    
+                </li>
+            
+
+            
+                <li title="">
+                    
+                </li>
+            
+        </ul>
+    </div>
+</footer>
+
+    </body>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+
+    
+    
+
+
+    <script
+        type="text/javascript"
+        src="/js/index_d751713.min.5eeb120f16ea146352725c420364f87befead45f678142b8f0ffbef024646931fbc06bff07a7bd6cb57fa2f8cd8a21ba6a4ee5a278ec32303a378bc1cd17f246.js"
+        integrity="sha512-XusSDxbqFGNSclxCA2T4e&#43;/q1F9ngUK48P&#43;&#43;8CRkaTH7wGv/B6e9bLV/ovjNiiG6ak7lonjsMjA6N4vBzRfyRg=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+
+
+
+
+</html>
